@@ -54,3 +54,19 @@
         }
     }
 }
+
+// Add Item Section
+.add-item-section  {
+
+    display: flex;
+    
+    // horizontal - vertical center
+    justify-content: center;
+    align-items: center; 
+
+    // Add Item Container
+    .add-item-container{
+
+        width: 680px;
+    }
+}
