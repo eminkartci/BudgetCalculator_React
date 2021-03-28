@@ -6,6 +6,13 @@
     display: flex;
     width: 100%;
 
+    &:hover{
+        .x-icon-button{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
     .x-icon-button{
         position: absolute;
         height: 40px;
@@ -13,6 +20,7 @@
         
         border-radius: 50%;
         
+        background: lighten($light-red,15%) ;
         background-image: url('../../../assets/images/clear.png');
         background-repeat: no-repeat;
         background-position: center ;
@@ -20,15 +28,19 @@
         right: -20px;
         top: -20px;
 
+        transition: opacity 0.2s ease-in, transform 0.2s ease-in;
         transform: scale(0);
-    }
+        opacity: 0;
 
-    &:hover{
-        .x-icon-button{
-            opacity: 1;
-            transform: scale(1);
+        &:hover{
+
+            transform: scale(1.2);
+            background-color: $light-red;
+
+            cursor:pointer;
         }
     }
+
 }
 
 .budget-item {
@@ -55,6 +67,10 @@
     .amount{
         padding: 5px;
         border-radius: 3px;
+    }
+
+    &:hover{
+        background-color: darken($light-grey,5%);
     }
 }
 
