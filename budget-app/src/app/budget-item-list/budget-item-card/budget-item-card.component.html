@@ -1,1 +1,14 @@
-<p>budget-item-card works!</p>
+<div class="root">
+    <div class="budget-item" [ngClass] = "{'income': isIncome, 'expense': !isIncome}">
+
+        <!-- DESCRIPTION -->
+        <div class="description">
+            <p>Test</p>
+        </div>
+
+        <!-- AMOUNT -->
+        <div class="amount">
+            <P>1500</P>
+        </div>
+    </div>
+</div>
