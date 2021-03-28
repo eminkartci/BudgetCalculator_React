@@ -2,8 +2,33 @@
 @import '../../../main-styles.scss';
 
 .root {
+    position: relative;
     display: flex;
     width: 100%;
+
+    .x-icon-button{
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        
+        border-radius: 50%;
+        
+        background-image: url('../../../assets/images/clear.png');
+        background-repeat: no-repeat;
+        background-position: center ;
+        // radius 
+        right: -20px;
+        top: -20px;
+
+        transform: scale(0);
+    }
+
+    &:hover{
+        .x-icon-button{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
 }
 
 .budget-item {
@@ -17,9 +42,14 @@
     cursor: pointer;
 
     .description{
+        display: flex;
         flex-grow: 1;
         font-size: 18px;
         margin-left: 5px;
+
+        // horizontal - vertical center
+        justify-content: center;
+        align-items: center;
     }
     
     .amount{
