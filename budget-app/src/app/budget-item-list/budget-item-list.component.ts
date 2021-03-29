@@ -32,7 +32,8 @@ export class BudgetItemListComponent implements OnInit {
     dialgRef.afterClosed().subscribe(result =>{
       // check if the result is not null
       if(result){
-        
+        // replace the item with new values
+        this.budgetItems[this.budgetItems.indexOf(item)] = result;
 
       }
     })

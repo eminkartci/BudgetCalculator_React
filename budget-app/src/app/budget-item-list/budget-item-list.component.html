@@ -15,6 +15,7 @@
                     <app-budget-item-card 
                     *ngIf="item.amount >= 0"
                     (xButtonClick)= "onDeleteButtonClicked(item)"
+                    (cardClick) = "onCardClicked()"
                     [item]="item"></app-budget-item-card>
                 </div>
             </div>
@@ -31,7 +32,7 @@
                     <app-budget-item-card 
                     *ngIf="item.amount < 0"
                     (xButtonClick)= "onDeleteButtonClicked(item)"
-                    (cardClick) = "onCardClicked()"
+                    (cardClick) = "onCardClick()"
                     [item]="item"></app-budget-item-card>
                 </div>
             </div>
