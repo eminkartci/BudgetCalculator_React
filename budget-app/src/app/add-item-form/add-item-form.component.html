@@ -1,5 +1,5 @@
 
-<form>
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
     <div class="field is-horizontal">
 
         <!-- Horizontal Div -->
@@ -20,8 +20,8 @@
             </div>
 
             <!-- Add Button-->
-            <div class="button button is-primary is-narrow">
-                Add
+            <div class="field is-narrow" >
+                <button type= "submit" class="button is-primary is-narrow"> Add </button>
             </div>
         </div>
     </div>
