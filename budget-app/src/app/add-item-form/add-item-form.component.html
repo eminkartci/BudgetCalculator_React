@@ -8,20 +8,20 @@
             <!-- Amount Field -->
             <div class="field is-narrow">
                 <p class="control">
-                    <input type="number" class="input" placeholder="Amount" style="width: 150px;">
+                    <input type="number" required name="amount" class="input" placeholder="Amount" style="width: 150px;" [ngModel]="item.amount">
                 </p>
             </div>
 
             <!-- Tag Field-->
             <div class="field">
                 <p class="control">
-                    <input type="text" class="input" placeholder="Tag">
+                    <input type="text" required name="description" class="input" placeholder="Tag" [ngModel]="item.description">
                 </p>
             </div>
 
             <!-- Add Button-->
             <div class="field is-narrow" >
-                <button type= "submit" class="button is-primary is-narrow"> Add </button>
+                <button type= "submit" class="button is-primary is-narrow" [disabled]="!itemForm.valid"> Add </button>
             </div>
         </div>
     </div>
