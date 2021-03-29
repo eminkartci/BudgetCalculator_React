@@ -14,6 +14,7 @@
                 <div *ngFor = "let item of budgetItems">
                     <app-budget-item-card 
                     *ngIf="item.amount >= 0"
+                    (xButtonClick)= "onDeleteButtonClicked(item)"
                     [item]="item"></app-budget-item-card>
                 </div>
             </div>
@@ -29,6 +30,7 @@
                 <div *ngFor = "let item of budgetItems">
                     <app-budget-item-card 
                     *ngIf="item.amount < 0"
+                    (xButtonClick)= "onDeleteButtonClicked(item)"
                     [item]="item"></app-budget-item-card>
                 </div>
             </div>
