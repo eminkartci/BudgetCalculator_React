@@ -8,7 +8,7 @@ import { BudgetItem } from 'src/shared/models/budget-item.model';
 })
 export class BudgetItemCardComponent implements OnInit {
 
-  @Input() item: BudgetItem; 
+  @Input() item: BudgetItem;  
 
   constructor() { }
 
